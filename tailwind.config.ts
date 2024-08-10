@@ -29,7 +29,7 @@ const config: Config = {
       },
 
       screens: {
-        "xs": "37px",
+        "xs": "375px",
         'xl': '1440px',
       },
     },
@@ -37,3 +37,4 @@ const config: Config = {
   plugins: [],
 };
 export default config;
+

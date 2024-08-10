@@ -1,20 +1,20 @@
 export const getBackgroundClasses = (pathname: string) => {
     switch (pathname) {
       case '/':
-        return 'bg-home-mobile sm:bg-home-tablet lg:bg-home-desktop'
+        return 'bg-home-mobile md:bg-home-tablet xl:bg-home-desktop'
       case '/destination':
-        return 'bg-destination-mobile sm:bg-destination-tablet lg:bg-destination-desktop'
+        return 'bg-destination-mobile md:bg-destination-tablet xl:bg-destination-desktop'
       case '/crew':
-        return 'bg-crew-mobile sm:bg-crew-tablet lg:bg-crew-desktop'
+        return 'bg-crew-mobile md:bg-crew-tablet xl:bg-crew-desktop'
       case '/technology':
-        return 'bg-technology-mobile sm:bg-technology-tablet lg:bg-technology-desktop'
+        return 'bg-technology-mobile md:bg-technology-tablet xl:bg-technology-desktop'
       case '/register':
       case '/login':
-        return 'bg-register-login-mobile sm:bg-register-login-tablet lg:bg-register-login-desktop'
+        return 'bg-register-login-mobile md:bg-register-login-tablet xl:bg-register-login-desktop'
       default:
         if (pathname.startsWith('/user/')) {
-          return 'bg-user-mobile sm:bg-user-tablet lg:bg-user-desktop'
+          return 'bg-user-mobile md:bg-user-tablet xl:bg-user-desktop'
         }
-        return 'bg-default-mobile sm:bg-default-tablet lg:bg-default-desktop'
+        return 'bg-default-mobile md:bg-default-tablet xl:bg-default-desktop'
     }
   }

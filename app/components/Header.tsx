@@ -12,7 +12,7 @@ const Header = () => {
       <Link href="/" className="md:hidden">
         <Image src={logoMobile} alt="logo" width={40} height={40} />
       </Link>
-      <Link href="/" className="xs:hidden md:block ">
+      <Link href="/" className="hidden md:block ">
         <Image src={logoTablet} alt="logo" width={48} height={48} />
       </Link>
 
