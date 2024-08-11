@@ -48,8 +48,8 @@ const Destination = () => {
               key={destination.name}
               onClick={() => setActiveTab(destination.name)}
               className={` pb-2 font-barlow_condensed uppercase leading-[17px] tracking-[2.3625px] text-[#D0D6F9] ${
-                activeTab === destination.name &&
-                'border-b-[3px] border-white tracking-[2.36px]'
+                activeTab === destination.name ?
+                'border-b-[3px] border-white tracking-[2.36px]':' border-b-[3px] border-transparent'
               }`}
             >
               {destination.name}
