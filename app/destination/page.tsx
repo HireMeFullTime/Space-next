@@ -42,14 +42,16 @@ const Destination = () => {
       </div>
       <div className="flex flex-col items-center">
         {/* tabs titles*/}
+
         <div className="flex gap-7 text-sm ">
           {destinations.map((destination) => (
             <button
               key={destination.name}
               onClick={() => setActiveTab(destination.name)}
               className={` pb-2 font-barlow_condensed uppercase leading-[17px] tracking-[2.3625px] text-[#D0D6F9] ${
-                activeTab === destination.name ?
-                'border-b-[3px] border-white tracking-[2.36px]':' border-b-[3px] border-transparent'
+                activeTab === destination.name
+                  ? 'border-b-[3px] border-white tracking-[2.36px] text-white'
+                  : 'border-b-[3px] border-transparent hover:border-white hover:opacity-50'
               }`}
             >
               {destination.name}
