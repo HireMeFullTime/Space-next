@@ -28,10 +28,11 @@ const Destination = () => {
 
   return (
     <div className="flex w-full flex-col items-center overflow-y-auto xl:flex-row">
-      <h1 className="font-barlow_condensed leading-[19.2px] tracking-[2.7px] text-white">
-        <span className="font-bold opacity-25">01</span> PICK YOUR DESTINATION
+      <h1 className="font-barlow_condensed leading-[19.2px] tracking-[2.7px]  text-white md:self-start md:text-xl md:leading-6 md:tracking-[3.38px]">
+        <span className="pr-2 font-bold opacity-25">01</span> PICK YOUR
+        DESTINATION
       </h1>
-      <div className="mb-[26px] mt-8">
+      <div className="mb-[26px] mt-8 md:mb-[50px] md:mt-[60px]">
         <Image
           src={imagesMap[activeTab]}
           alt={activeTab}
@@ -42,13 +43,12 @@ const Destination = () => {
       </div>
       <div className="flex flex-col items-center">
         {/* tabs titles*/}
-
         <div className="flex gap-7 text-sm ">
           {destinations.map((destination) => (
             <button
               key={destination.name}
               onClick={() => setActiveTab(destination.name)}
-              className={` pb-2 font-barlow_condensed uppercase leading-[17px] tracking-[2.3625px] text-[#D0D6F9] ${
+              className={` pb-2 font-barlow_condensed uppercase leading-[17px] tracking-[2.3625px] text-[#D0D6F9] md:leading-[19px] md:tracking-[2.7px] ${
                 activeTab === destination.name
                   ? 'border-b-[3px] border-white tracking-[2.36px] text-white'
                   : 'border-b-[3px] border-transparent hover:border-white hover:opacity-50'
@@ -58,7 +58,6 @@ const Destination = () => {
             </button>
           ))}
         </div>
-
         {/* tabs content */}
 
         {destinations.map(
@@ -68,25 +67,27 @@ const Destination = () => {
                 key={destination.name}
                 className="flex flex-col items-center"
               >
-                <h2 className="pt-5 font-bellefair text-[56px] uppercase leading-[64px] text-white">
+                <h2 className="pt-5 font-bellefair text-[56px] uppercase leading-[64px] text-white  md:text-[80px] md:leading-[92px]">
                   {destination.name}
                 </h2>
-                <p className=" text-center font-barlow text-[15px] leading-[25px] text-[#D0D6F9] ">
+                <p className=" text-center font-barlow text-[15px] leading-[25px] text-[#D0D6F9] md:px-[78px] md:pt-[10px]  md:text-base md:leading-7">
                   {destination.description}
                 </p>
-                <hr className="my-8 w-full border-[#383B4B]" />
-                <p className="flex max-w-[216px] flex-wrap justify-center text-center font-barlow_condensed text-sm uppercase leading-[17px] tracking-[2.36px] text-[#D0D6F9]">
-                  AVG. Distance
-                  <span className="mb-8 mt-3 font-bellefair text-[28px] leading-8 text-white">
-                    {destination.distance}
-                  </span>
-                </p>
-                <p className="flex max-w-[216px] flex-wrap justify-center text-center font-barlow_condensed text-sm uppercase leading-[17px] tracking-[2.36px] text-[#D0D6F9]">
-                  EST. Travel Time
-                  <span className="mb-8 mt-3 font-bellefair text-[28px] leading-8 text-white">
-                    {destination.travel}
-                  </span>
-                </p>
+                <hr className="my-8 w-full border-[#383B4B] md:mt-12" />
+                <div className="md:flex">
+                  <p className="flex max-w-[216px] flex-wrap justify-center text-center font-barlow_condensed text-sm uppercase leading-[17px] tracking-[2.36px] text-[#D0D6F9] outline outline-1 outline-red-200">
+                    AVG. Distance
+                    <span className="mb-8 mt-3 font-bellefair text-[28px] leading-8 text-white md:mb-0">
+                      {destination.distance}
+                    </span>
+                  </p>
+                  <p className="flex max-w-[216px] flex-wrap justify-center text-center font-barlow_condensed text-sm uppercase leading-[17px] tracking-[2.36px] text-[#D0D6F9]  outline outline-1 outline-red-200">
+                    EST. Travel Time
+                    <span className="mb-8 mt-3 font-bellefair text-[28px] leading-8 text-white md:mb-0">
+                      {destination.travel}
+                    </span>
+                  </p>
+                </div>
               </div>
             ),
         )}
