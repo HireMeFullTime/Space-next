@@ -73,7 +73,7 @@ const Destination = () => {
                   <h2 className="pt-5 font-bellefair text-[56px] uppercase leading-[64px] text-white md:text-[80px]  md:leading-[92px] xl:pt-10 xl:text-[100px] xl:leading-[115px]">
                     {destination.name}
                   </h2>
-                  <p className="text-center font-barlow text-[15px] leading-[25px] text-[#D0D6F9] md:px-[63px] md:pt-[10px] md:text-base md:leading-7 xl:px-0 xl:text-left xl:text-lg xl:leading-8">
+                  <p className="text-center font-barlow text-[15px] leading-[25px] text-[#D0D6F9] md:pt-[10px] md:text-base md:leading-7 xl:px-0 xl:text-left xl:text-lg xl:leading-8">
                     {destination.description}
                   </p>
                   <hr className="my-8 w-full border-[#383B4B] md:mt-12" />
