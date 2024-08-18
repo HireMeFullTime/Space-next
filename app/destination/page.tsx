@@ -68,7 +68,7 @@ const Destination = () => {
               activeTab === destination.name && (
                 <div
                   key={destination.name}
-                  className="flex flex-col items-center md:max-w-[573px] xl:items-start"
+                  className="flex flex-col items-center md:max-w-[573px] xl:items-start md:pb-14"
                 >
                   <h2 className="pt-5 font-bellefair text-[56px] uppercase leading-[64px] text-white md:text-[80px]  md:leading-[92px] xl:pt-10 xl:text-[100px] xl:leading-[115px]">
                     {destination.name}
