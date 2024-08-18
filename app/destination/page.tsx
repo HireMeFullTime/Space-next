@@ -33,7 +33,7 @@ const Destination = () => {
         DESTINATION
       </h1>
       <div className="xl:-ml-[90px] xl:flex xl:gap-40 xl:pt-16">
-        <div className="mb-[26px] mt-8 flex justify-center md:mb-[50px] md:mt-[60px] ">
+        <div className="mb-[26px] mt-8 flex justify-center md:mb-[50px] md:mt-[60px] xl:mt-[30px] ">
           <Image
             src={imagesMap[activeTab]}
             alt={activeTab}
@@ -77,14 +77,14 @@ const Destination = () => {
                     {destination.description}
                   </p>
                   <hr className="my-8 w-full border-[#383B4B] md:mt-12" />
-                  <div className="md:flex">
-                    <p className="flex max-w-[216px] flex-wrap justify-center text-center font-barlow_condensed text-sm uppercase leading-[17px] tracking-[2.36px] text-[#D0D6F9]">
+                  <div className="md:flex gap-7">
+                    <p className="flex max-w-[216px] flex-wrap justify-center text-center font-barlow_condensed text-sm uppercase leading-[17px] tracking-[2.36px] text-[#D0D6F9] xl:justify-start">
                       AVG. Distance
                       <span className="mb-8 mt-3 font-bellefair text-[28px] leading-8 text-white md:mb-0">
                         {destination.distance}
                       </span>
                     </p>
-                    <p className="flex max-w-[216px] flex-wrap justify-center text-center font-barlow_condensed text-sm uppercase leading-[17px] tracking-[2.36px] text-[#D0D6F9]">
+                    <p className="flex max-w-[216px] flex-wrap justify-center text-center font-barlow_condensed text-sm uppercase leading-[17px] tracking-[2.36px] text-[#D0D6F9] xl:justify-start">
                       EST. Travel Time
                       <span className="mt-3 font-bellefair text-[28px] leading-8 text-white md:mb-0">
                         {destination.travel}
