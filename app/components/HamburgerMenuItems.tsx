@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import close_icon from '@/public/close_icon.png';
 import { usePathname } from 'next/navigation';
 
-import close_icon from '../assets/close_icon.png';
 import { navLinks } from '../utils/navlinks';
 
 interface MenuItemsProps {
