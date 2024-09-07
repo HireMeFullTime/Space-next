@@ -1,14 +1,10 @@
 'use client';
 
 import React from 'react';
-import anoushehMobile from '@/public/crew/mobile/anousheh-mobile.png';
 import crewData from '@/data.json';
-import douglasMobile from '@/public/crew/mobile/douglas-mobile.png';
-import markMobile from '@/public/crew/mobile/mark-mobile.png';
 import useEmblaCarousel from 'embla-carousel-react';
-import victorMobile from '@/public/crew/mobile/victor-mobile.png';
-import Image, { StaticImageData } from 'next/image';
 
+import CrewImages from './CrewImages';
 import { DotButton } from './EmblaCarouselDotButton';
 import { useDotButton } from '../hooks/useDotButton';
 
@@ -18,15 +14,10 @@ interface Crew {
   bio: string;
 }
 
-const crewMapMobile: { [key: string]: StaticImageData } = {
-  'Anousheh Ansari': anoushehMobile,
-  'Douglas Hurley': douglasMobile,
-  'Mark Shuttleworth': markMobile,
-  'Victor Glover': victorMobile,
-};
+
 const CrewCarousel: React.FC = () => {
   const crew: Crew[] = crewData.crew;
-  const [emblaRef, emblaApi] = useEmblaCarousel();
+  const [emblaRef, emblaApi] = useEmblaCarousel({loop:true});
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
 
@@ -40,12 +31,7 @@ const CrewCarousel: React.FC = () => {
           {crew.map((crewMember) => (
             <div key={crewMember.name} className="flex-[0_0_100%] ">
               <div className=" flex w-full flex-col items-center pt-8 text-white">
-                <div className=" ] flex w-full  justify-center border-b-[1px] border-[#383B4B]">
-                  <Image
-                    src={crewMapMobile[crewMember.name]}
-                    alt={crewMember.name}
-                  />
-                </div>
+                <CrewImages crewMember={crewMember} />
                 <div className="pt-[74px] text-center">
                   <p className="pb-2 font-bellefair uppercase leading-[18px] opacity-50">
                     {crewMember.role}
