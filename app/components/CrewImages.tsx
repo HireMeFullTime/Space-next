@@ -46,7 +46,7 @@ const crewMapDesktop: { [key: string]: StaticImageData } = {
 
 const CrewImages: FC<CrewImagesProps> = ({ crewMember }) => {
   return (
-    <div className="flex w-full justify-center border-b-[1px] border-[#383B4B] md:order-1">
+    <div className="flex w-full justify-center border-b-[1px] border-[#383B4B] md:border-none">
       <Image
         src={crewMapMobile[crewMember.name]}
         alt={crewMember.name}
