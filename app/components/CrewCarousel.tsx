@@ -53,6 +53,7 @@ const CrewCarousel: React.FC = () => {
               <DotButton
                 key={index}
                 onClick={() => onDotButtonClick(index)}
+                aria-label={`Go to slide ${index + 1}`}
                 className={`embla__dot h-[10px] w-[10px] cursor-pointer rounded-full bg-[#ffffff2b] after:flex after:h-[10px] after:w-[10px] after:rounded-full after:content-[''] xl:h-[15px] xl:w-[15px] xl:after:h-[15px] xl:after:w-[15px] ${
                   index === selectedIndex
                     ? ' embla__dot--selected after:bg-white'

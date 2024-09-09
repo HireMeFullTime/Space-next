@@ -21,12 +21,16 @@ const Nav = () => {
             <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-white/50 opacity-0 peer-hover:opacity-100" />
 
             {pathname === item.href && (
-              <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-white" />
+              <div
+                aria-hidden="true"
+                className="absolute bottom-0 left-0 right-0 h-[3px] bg-white"
+              />
             )}
           </li>
         ))}
 
         <div
+          aria-hidden="true"
           className="absolute -left-[503px]  top-2/4 hidden h-[1px] w-full
         max-w-[473px]   bg-[#ffffff40]
         xl:block"
