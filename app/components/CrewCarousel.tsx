@@ -48,7 +48,7 @@ const CrewCarousel: React.FC = () => {
         </div>
 
         <div className="embla__controls">
-          <div className="embla__dots absolute left-1/2 top-1/2 z-50 flex -translate-x-1/2 translate-y-4 gap-4 md:-translate-y-[163px] xl:left-0 xl:translate-x-0 xl:translate-y-[194px]">
+          <div className="embla__dots absolute left-1/2 top-1/2 z-1 flex -translate-x-1/2 translate-y-4 gap-4 md:-translate-y-[163px] xl:left-0 xl:translate-x-0 xl:translate-y-[194px]">
             {scrollSnaps.map((_, index) => (
               <DotButton
                 key={index}
