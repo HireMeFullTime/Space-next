@@ -50,18 +50,24 @@ const CrewImages: FC<CrewImagesProps> = ({ crewMember }) => {
       <Image
         src={crewMapMobile[crewMember.name]}
         alt={crewMember.name}
+        placeholder="blur"
+        priority={true}
         className="md:hidden"
       />
 
       <Image
         src={crewMapTablet[crewMember.name]}
         alt={crewMember.name}
+        placeholder="blur"
+        priority={true}
         className="hidden md:block xl:hidden"
       />
 
       <Image
         src={crewMapDesktop[crewMember.name]}
         alt={crewMember.name}
+        placeholder="blur"
+        priority={true}
         className="hidden xl:block xl:h-[622px] xl:w-auto"
       />
     </div>
