@@ -1,12 +1,14 @@
 'use client';
 
-import data from '@/data.json'; // Import JSON
-import europaImage from '@/app/assets/destination/image-europa.webp';
-import marsImage from '@/app/assets/destination/image-mars.webp';
-import moonImage from '@/app/assets/destination/image-moon.webp';
-import titanImage from '@/app/assets/destination/image-titan.webp';
+import data from '@/data.json';
+import europaImage from '@/public/destination/image-europa.webp';
+import marsImage from '@/public/destination/image-mars.webp';
+import moonImage from '@/public/destination/image-moon.webp';
+import titanImage from '@/public/destination/image-titan.webp';
 import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
+
+import PageTitle from '../components/PageTitle';
 
 interface Destination {
   name: string;
@@ -28,10 +30,7 @@ const Destination = () => {
 
   return (
     <div className="flex w-full flex-col items-center overflow-y-auto ">
-      <h1 className="font-barlow_condensed leading-[19.2px] tracking-[2.7px]  text-white md:self-start md:text-xl md:leading-6 md:tracking-[3.38px] xl:text-[28px] xl:leading-[34px] xl:tracking-[4.73px]">
-        <span className="pr-2 font-bold opacity-25 xl:pr-4">01</span> PICK YOUR
-        DESTINATION
-      </h1>
+      <PageTitle number="01" text="Pick your destination" />
       <div className="xl:-ml-[90px] xl:flex xl:gap-40 xl:pt-16">
         <div className="mb-[26px] mt-8 flex justify-center md:mb-[50px] md:mt-[60px] xl:mt-[30px] ">
           <Image
@@ -40,6 +39,8 @@ const Destination = () => {
             width={170}
             height={170}
             className="md:h-[300px] md:w-[300px] xl:h-[445px] xl:w-[445px]"
+            placeholder="blur"
+            draggable="false"
           />
         </div>
         <div className="flex flex-col items-center xl:max-w-[445px] xl:items-start">
@@ -68,7 +69,7 @@ const Destination = () => {
               activeTab === destination.name && (
                 <div
                   key={destination.name}
-                  className="flex flex-col items-center md:max-w-[573px] xl:items-start md:pb-14"
+                  className="flex flex-col items-center md:max-w-[573px] md:pb-14 xl:items-start"
                 >
                   <h2 className="pt-5 font-bellefair text-[56px] uppercase leading-[64px] text-white md:text-[80px]  md:leading-[92px] xl:pt-10 xl:text-[100px] xl:leading-[115px]">
                     {destination.name}
@@ -77,7 +78,7 @@ const Destination = () => {
                     {destination.description}
                   </p>
                   <hr className="my-8 w-full border-[#383B4B] md:mt-12" />
-                  <div className="md:flex gap-7">
+                  <div className="gap-7 md:flex">
                     <p className="flex max-w-[216px] flex-wrap justify-center text-center font-barlow_condensed text-sm uppercase leading-[17px] tracking-[2.36px] text-[#D0D6F9] xl:justify-start">
                       AVG. Distance
                       <span className="mb-8 mt-3 font-bellefair text-[28px] leading-8 text-white md:mb-0">

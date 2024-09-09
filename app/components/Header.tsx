@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import logoMobile from '@/public/logo_mobile.png';
+import logoTablet from '@/public/logo_tablet.png';
 
 import HamburgerMenu from './HamburgerMenu';
 import Nav from './Nav';
-import logoMobile from '../assets/logo_mobile.png';
-import logoTablet from '../assets/logo_tablet.png';
 
 const Header = () => {
   return (

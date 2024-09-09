@@ -1,10 +1,10 @@
 'use client';
 
 import Image from 'next/image';
+import hamburger_icon from '@/public/hamburger.png';
 import { useEffect, useState } from 'react';
 
 import HamburgerMenuItems from './HamburgerMenuItems';
-import hamburger_icon from '../assets/hamburger.png';
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
