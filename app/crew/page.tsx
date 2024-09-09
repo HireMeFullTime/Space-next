@@ -3,8 +3,8 @@ import PageTitle from '../components/PageTitle';
 
 const Crew = () => {
   return (
-    <div className="w-full flex flex-col items-center  overflow-hidden">
-      <PageTitle number={'02'} text={'Meet your crew'} />
+    <div className="flex w-full flex-col items-center overflow-y-auto">
+      <PageTitle number="02" text="Meet your crew" />
       <CrewCarousel />
     </div>
   );

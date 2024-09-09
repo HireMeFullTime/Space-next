@@ -62,7 +62,7 @@ const CrewImages: FC<CrewImagesProps> = ({ crewMember }) => {
       <Image
         src={crewMapDesktop[crewMember.name]}
         alt={crewMember.name}
-        className="hidden xl:block"
+        className="hidden xl:block xl:h-[622px] xl:w-auto"
       />
     </div>
   );
