@@ -24,7 +24,7 @@ const CrewCarousel: React.FC = () => {
     <section className="embla relative  max-w-full">
       <div
         ref={emblaRef}
-        className="embla__viewport w-full overflow-hidden outline outline-1 outline-yellow-300  md:h-full md:max-h-[863px]"
+        className="embla__viewport w-full overflow-hidden md:h-full md:max-h-[863px]"
       >
         <div className="embla__container flex  w-full">
           {crew.map((crewMember) => (
@@ -57,7 +57,7 @@ const CrewCarousel: React.FC = () => {
                 className={`embla__dot h-[10px] w-[10px] cursor-pointer rounded-full bg-[#ffffff2b] after:flex after:h-[10px] after:w-[10px] after:rounded-full after:content-[''] xl:h-[15px] xl:w-[15px] xl:after:h-[15px] xl:after:w-[15px] ${
                   index === selectedIndex
                     ? ' embla__dot--selected after:bg-white'
-                    : ''
+                    : 'hover:bg-[#ffffff80]'
                 }`}
               />
             ))}
