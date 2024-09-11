@@ -29,28 +29,25 @@ const TechnologyCarousel: React.FC = () => {
   const technology: Technology[] = technologydata.technology;
 
   return (
-    <section className="embla relative w-full pt-8 text-white outline outline-1 outline-blue-300 xl:pt-0">
-      <div
-        className="embla__viewport h-full max-h-[650px] overflow-hidden "
-        ref={emblaRef}
-      >
+    <section className="embla relative  w-full pt-8 text-white outline outline-1 outline-blue-300 md:pt-[60px] xl:pt-0">
+      <div className="embla__viewport h-full  overflow-hidden " ref={emblaRef}>
         <div className="embla__container flex h-full w-full  xl:flex-col">
           {technology.map((technologyThing) => (
             <div
               key={technologyThing.name}
               className="embla__slide flex-[0_0_100%] "
             >
-              <div className="flex  w-full flex-col items-center gap-[100px] text-[#D0D6F9] xl:flex-row-reverse xl:items-center xl:justify-center ">
+              <div className="flex  w-full flex-col items-center gap-[100px] text-[#D0D6F9] md:gap-40 xl:flex-row-reverse xl:items-center xl:justify-center ">
                 <TechnologyImages technologyThing={technologyThing} />
 
-                <div className="flex w-full flex-1 flex-col items-center justify-center   outline outline-1 outline-yellow-300 xl:w-1/2">
-                  <p className="pb-2 font-barlow_condensed  text-sm leading-[17px] tracking-[2.36px]">
+                <div className="flex w-full flex-col items-center justify-center   outline outline-1 outline-yellow-300 xl:w-1/2">
+                  <p className="pb-2 font-barlow_condensed text-sm leading-[17px] tracking-[2.36px] md:pb-4  md:text-base md:leading-[19px] md:tracking-[2.7px]">
                     THE TERMINOLOGY...
                   </p>
-                  <h2 className="pb-4 font-bellefair text-2xl uppercase leading-7 text-white">
+                  <h2 className="pb-4 font-bellefair text-2xl uppercase leading-7 text-white md:text-[40px] md:leading-[46px]">
                     {technologyThing.name}
                   </h2>
-                  <p className="max-w-[327px] text-center text-[15px] leading-[25px] outline outline-1">
+                  <p className="max-w-[327px] text-center font-barlow text-[15px] leading-[25px] outline outline-1 md:max-w-[458px] md:text-base md:leading-7">
                     {technologyThing.description}
                   </p>
                 </div>
@@ -60,11 +57,11 @@ const TechnologyCarousel: React.FC = () => {
         </div>
       </div>
 
-      <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-[calc(50%+10px)] justify-center gap-4  xl:left-4  xl:flex-col">
+      <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-[calc(50%+10px)] justify-center gap-4 md:translate-y-[calc(50%+14px)]  xl:left-4  xl:flex-col">
         {scrollSnaps.map((_, index) => (
           <button
             key={index}
-            className={`relative flex h-10 w-10 items-center justify-center rounded-full font-bellefair leading-[18.34px] text-[#0B0D17] ${
+            className={`relative flex h-10 w-10 items-center justify-center rounded-full font-bellefair leading-[18.34px] text-[#0B0D17] md:h-[58px] md:w-[58px] ${
               index === selectedIndex
                 ? 'bg-white'
                 : 'bg-[#FFFFFF80] xl:hover:border xl:hover:border-white xl:hover:bg-[#0B0D17]'
@@ -72,7 +69,7 @@ const TechnologyCarousel: React.FC = () => {
             onClick={() => onDotButtonClick(index)}
           >
             {index !== selectedIndex && (
-              <div className="absolute h-6 w-6 rotate-45 transform bg-[#0B0D17]"></div>
+              <div className="absolute h-6 w-6 rotate-45 transform bg-[#0B0D17] md:h-[41px] md:w-[41px]"></div>
             )}
             <span
               className={`${

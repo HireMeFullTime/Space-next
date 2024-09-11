@@ -34,7 +34,7 @@ const TechnologyImages: FC<TechnologyImagesProps> = ({ technologyThing }) => {
         alt={technologyThing.name}
         placeholder="blur"
         priority={true}
-        className="h-[170px] w-auto xl:hidden"
+        className="h-[170px] w-auto md:w-full md:h-auto xl:hidden"
       />
       <Image
         src={technologyMapPortrait[technologyThing.name]}
