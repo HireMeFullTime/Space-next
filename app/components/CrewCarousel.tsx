@@ -21,14 +21,14 @@ const CrewCarousel: React.FC = () => {
     useDotButton(emblaApi);
 
   return (
-    <section className="embla relative  max-w-full  ">
+    <section className="embla relative  max-w-full">
       <div
         ref={emblaRef}
-        className="embla__viewport w-full overflow-hidden  md:h-full md:max-h-[863px]  "
+        className="embla__viewport w-full overflow-hidden outline outline-1 outline-yellow-300  md:h-full md:max-h-[863px]"
       >
-        <div className="embla__container flex  w-full ">
+        <div className="embla__container flex  w-full">
           {crew.map((crewMember) => (
-            <div key={crewMember.name} className="flex-[0_0_100%]">
+            <div key={crewMember.name} className="embla__slide flex-[0_0_100%]">
               <div className=" flex  w-full flex-col items-center pt-8  text-white md:flex-col-reverse md:gap-[101px] xl:flex-row-reverse xl:items-start xl:gap-0  ">
                 <CrewImages crewMember={crewMember} />
                 <div className="pt-[74px] text-center md:pt-5 xl:w-full xl:max-w-[488px]  xl:pt-[122px] xl:text-left">
@@ -48,7 +48,7 @@ const CrewCarousel: React.FC = () => {
         </div>
 
         <div className="embla__controls">
-          <div className="embla__dots absolute left-1/2 top-1/2 z-1 flex -translate-x-1/2 translate-y-4 gap-4 md:-translate-y-[163px] xl:left-0 xl:translate-x-0 xl:translate-y-[194px]">
+          <div className="embla__dots z-1 absolute left-1/2 top-1/2 flex -translate-x-1/2 translate-y-4 gap-4 md:-translate-y-[163px] xl:left-0 xl:translate-x-0 xl:translate-y-[194px]">
             {scrollSnaps.map((_, index) => (
               <DotButton
                 key={index}
