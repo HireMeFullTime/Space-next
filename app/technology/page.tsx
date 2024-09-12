@@ -1,7 +1,14 @@
-import PageTitle from "../components/PageTitle";
+import PageTitle from '../components/PageTitle';
+import TechnologyCarousel from '../components/TechnologyCarousel';
 
 const Technology = () => {
-  return <div className="w-full overflow-y-auto"><PageTitle number={"03"} text="SPACE LAUNCH 101"/>
-  </div>;
+  return (
+    <div className="flex w-full flex-col items-center overflow-y-auto">
+      <div className="pl-10 xl:pl-0 md:self-start">
+        <PageTitle number="03" text="SPACE LAUNCH 101" />
+      </div>
+      <TechnologyCarousel />
+    </div>
+  );
 };
 export default Technology;
