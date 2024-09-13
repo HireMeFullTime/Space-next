@@ -1,4 +1,4 @@
-#### Fullstack app based on [frontendmentor.io](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3) challenge.
+#### Space 2.0- Fullstack app based on [frontendmentor.io](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3) challenge.
 
 
 ## Table of contents
