@@ -31,6 +31,7 @@ const config: Config = {
       screens: {
         "xs": "375px",
         'xl': '1440px',
+        'high-dpi': { 'raw': '(min-resolution: 144dpi)' }
       },
     },
   },
