@@ -56,8 +56,8 @@ const TechnologyCarousel: React.FC = () => {
           ))}
         </div>
       </div>
-
-      <div className="absolute left-1/2 top-1/2 high-dpi:outline high-dpi:-translate-y-1/2 high-dpi:outline-1 flex -translate-x-1/2 -translate-y-[calc(50%+5px)] justify-center gap-4 md:translate-y-[calc(50%+14px)] xl:left-0 xl:top-0 xl:translate-x-0 xl:translate-y-[calc(50%-30px)] xl:flex-col xl:gap-8">
+      {/* xl-high-dpi */}
+      <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-[calc(50%+5px)] justify-center gap-4 md:translate-y-[calc(50%+14px)] xl:left-0 xl:top-0 xl:translate-x-0 xl:translate-y-[calc(50%-30px)] xl:flex-col xl:gap-8 high-dpi:-translate-y-1/2 high-dpi:outline high-dpi:outline-1 xl-high-dpi:translate-y-[calc(50%-30px)]">
         {scrollSnaps.map((_, index) => (
           <button
             key={index}
